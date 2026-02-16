@@ -8,13 +8,16 @@ class Hash {
         try {
             // Usamos a constante estática da classe
             const hashGerado = await bcrypt.hash(senha, this.SALT_ROUNDS);
-            console.log("Hash gerado:", hashGerado);
+            //console.log("Hash gerado bcryptjs:", hashGerado);
             return hashGerado;
         } catch (error) {
             console.error("Erro ao criptografar:", error);
             throw error;
         }
     }
+    static async compare(senha, hash) {
+        return await bcrypt.compare(senha, hash);
+    }   
 }
 
 export default Hash;
