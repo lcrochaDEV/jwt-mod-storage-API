@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import connectDataBase from './src/roteamento/rotas.js';
+import connectDataBase from './src/Roteamento/Rotas.js';
 
 
 const HOST = process.env.SERVER_IP || "localhost"; 

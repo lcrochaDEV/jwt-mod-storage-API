@@ -52,15 +52,15 @@ class Rotas {
       try {
         Validation.validation(req.body); //Class que valida os dados
 
-        const { chave, valor, expiracao } = req.body;
+        const { valor, expiracao } = req.body;
 
-        const criptograPassw = await Hash.setHash(valor.passw);
         const novosDados = {
-          chave,
-          valor: { ...valor, passw: criptograPassw },
+          chave: await Hash.setHash(valor.user+valor.passw),
+          valor: { ...valor },
           expiracao
         };
         const dadosCripto = JWT.gerarToken(novosDados);
+        console.log(novosDados)
         console.log("Hash gerado:", dadosCripto)
  
         res.status(201).json({ message: "Criado com sucesso"});

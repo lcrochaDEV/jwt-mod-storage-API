@@ -24,7 +24,7 @@ class JWT {
             const hashToken = jwt.verify(token, this.SECRET_KEY);
             if (hashToken) {
                 const { iat, exp, ...dadosLimpos } = hashToken;
-               return dadosLimpos;
+                return dadosLimpos;
             }
 
         } catch (error) {
