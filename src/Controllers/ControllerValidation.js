@@ -4,13 +4,13 @@ class Validation {
     const { chave, valor } = body;
 
     if (!chave) {
-      throw new Error("Dados incompletos: chave é obrigatória.");
+      throw new Error({ message: "Dados incompletos: chave é obrigatória." });
     }
     if (!valor || !valor.user) {
-      throw new Error("Dados incompletos: usuario é obrigatória.");
+      throw new Error({ message:  "Dados incompletos: usuario é obrigatória." });
     }
     if (!valor || !valor.passw) {
-      throw new Error("Dados incompletos: senha é obrigatória.");
+      throw new Error({ message: "Dados incompletos: senha é obrigatória." });
     }
     
     // Opcional: Adicione regras de negócio (ex: tamanho da senha)

@@ -5,11 +5,11 @@ Este projeto demonstra um fluxo de autenticação seguro utilizando Node.js. A a
 ### 🛠️ Tecnologias e Dependências
 
 Para garantir um ambiente de desenvolvimento ágil e seguro, utilizamos as seguintes "bicicletas" (bibliotecas):
- * *Express*: Framework web minimalista para gerenciar rotas e middlewares.
- * *Bcrypt*: Biblioteca para hashing de senhas usando a técnica de salt, tornando-as seguras contra ataques de força bruta.
- * *JSON* Web Token (JWT): Padrão da indústria para representar reivindicações de segurança entre duas partes.
- * *Dotenv*: Gerencia variáveis de ambiente (como chaves secretas), mantendo dados sensíveis fora do código-fonte.
- * *Nodemon*: Ferramenta de desenvolvimento que reinicia o servidor automaticamente a cada alteração.
+ * **Express**: Framework web minimalista para gerenciar rotas e middlewares.
+ * **Bcrypt**: Biblioteca para hashing de senhas usando a técnica de salt, tornando-as seguras contra ataques de força bruta.
+ * **JSON Web Token** (JWT): Padrão da indústria para representar reivindicações de segurança entre duas partes.
+ * **Dotenv**: Gerencia variáveis de ambiente (como chaves secretas), mantendo dados sensíveis fora do código-fonte.
+ * **Nodemon**: Ferramenta de desenvolvimento que reinicia o servidor automaticamente a cada alteração.
 
 ### Instalação
 
@@ -29,9 +29,9 @@ npm install --save-dev nodemon
 
 O código segue uma estratégia de criptografia em dois níveis, garantindo que mesmo se os dados forem interceptados, eles permaneçam ilegíveis.
 1. Proteção de Dados Sensíveis (Bcrypt)
-Antes de qualquer armazenamento ou transmissão, a senha (passw) passa por um processo de hashing. Ao contrário da criptografia comum, o hash é unidirecional.
+Antes de qualquer armazenamento ou transmissão, o campo chave (chave) passa por um processo de hashing. Ao contrário da criptografia comum, o hash é unidirecional.
  
-O que acontece: O sistema gera um "salt" aleatório e o mistura à senha, gerando uma string única.
+O que acontece: O sistema gera um "salt" aleatório e o mistura com o campo user + passw, gerando uma chave única.
 
 2. Blindagem do Objeto (JWT)
 Após a validação da identidade, o objeto contendo as informações do usuário e a senha já hasheada é encapsulado em um Token JWT.
@@ -73,4 +73,9 @@ SECRET_KEY=sua_chave_secreta_super_segura
 
 ```shell
 npm run dev
-```
+```                                                                                                                                                                                                                                                                                                                                    
+<img src="https://images.icon-icons.com/2699/PNG/512/nodemonio_logo_icon_168944.png"  height="60"/>
+<img src="https://logowik.com/content/uploads/images/express-js1720895488.logowik.com.webp" height="60"/>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxDV-zIY4aQ36BtbEFRLE8Q4o9Ks5o1PxtA&s"  height="60"/>
+<img src="https://repository-images.githubusercontent.com/139898859/9617c480-81c2-11ea-94fc-322231ead1f0"  width="100" height="60"/>
+<img src="https://miro.medium.com/1*XkmnsJ6Joa6EDFVGUw0tfA.png" width="150" height="60"/>

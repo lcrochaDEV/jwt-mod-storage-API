@@ -1,4 +1,4 @@
-import Hash from "./ControllerHash.js";
+import Hash from "./ControllerBcrypt.js";
 import JWT from "./ControllerJWT.js"
 import Validation from "./ControllerValidation.js";
 
@@ -60,12 +60,22 @@ class Rotas {
           expiracao
         };
         const dadosCripto = JWT.gerarToken(novosDados);
-        console.log(novosDados)
-        console.log("Hash gerado:", dadosCripto)
- 
-        res.status(201).json({ message: "Criado com sucesso"});
+        res.status(201).json({ token: dadosCripto });
+        console.log("Criado com sucesso");
       } catch (erro) {
         res.status(500).json({ message: `${erro.message} - Falha ao cadastrar` });
+      }
+    }
+    static async methodPosAccessGranted(req, res) { 
+      try {
+        const { token } = req.body;
+        const desCripto = JWT.validarToken(token);
+        //const {chave, valor, expiracao} = desCripto;
+
+        console.log(desCripto)
+        res.status(201).json(desCripto);
+      } catch (erro) {
+        res.status(500).json({ message: `${erro.message} - Falha no Acesso` });
       }
     }
   }
