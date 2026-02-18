@@ -79,6 +79,6 @@ npm run dev
   <img src="https://images.icon-icons.com/2699/PNG/512/nodemonio_logo_icon_168944.png" height="60"/>
   <img src="https://logowik.com/content/uploads/images/express-js1720895488.logowik.com.webp" height="60"/>
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvxDV-zIY4aQ36BtbEFRLE8Q4o9Ks5o1PxtA&s" height="60"/>
-  <img src="https://repository-images.githubusercontent.com/139898859/9617c480-81c2-11ea-94fc-322231ead1f0" style="max-width: 100%; height: 100; max-height: 60px;"/>
-  <img src="https://miro.medium.com/1*XkmnsJ6Joa6EDFVGUw0tfA.png" style="max-width: 100%; height: 150; max-height: 60px;"/>
+  <img src="https://repository-images.githubusercontent.com/139898859/9617c480-81c2-11ea-94fc-322231ead1f0" width="100" height="60" style="max-width: 100%;"/>
+  <img src="https://miro.medium.com/1*XkmnsJ6Joa6EDFVGUw0tfA.png" width="150" height="60" style="max-width: 100%;"/>
 </div>
