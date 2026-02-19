@@ -29,8 +29,7 @@ class JWT {
 
         } catch (error) {
             // Retorna null caso o token seja inválido, manipulado ou expirado
-            console.error("Token inválido ou expirado");
-            return null;
+            throw new Error({ message: "Token inválido ou expirado" });
         }
     }
 }

@@ -11,8 +11,7 @@ class Hash {
             //console.log("Hash gerado bcryptjs:", hashGerado);
             return hashGerado;
         } catch (error) {
-            console.error("Erro ao criptografar:", error);
-            throw error;
+           throw new Error({ message:"Erro ao criptografar:", error });
         }
     }
     static async compare(senha, hash) {
